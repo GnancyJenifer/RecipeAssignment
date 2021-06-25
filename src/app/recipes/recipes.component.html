@@ -1,0 +1,10 @@
+<div class="card" >
+    <div class="card-body">
+      <div class="row">
+        <app-recipe style="margin-bottom: 10px" class="col-md-3" (removed)="deleteRecipe($event)" [recipe]="r" *ngFor="let r of recipes"></app-recipe>
+        <div style="margin-bottom: 10px" class="col-md-3">
+            <button  type="button" class="btn btn-primary" [routerLink]="['/addRecipe']">Add New Recipe</button>
+        </div>
+    </div>      
+    </div>
+  </div>

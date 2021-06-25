@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Recipe Details : </h4>
+      <h6 *ngIf="recipe.vegetarian">Vegetarian</h6>
+      <h6 *ngIf="!recipe.vegetarian">Non Vegetarian</h6>      
+      
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <tr>
+              <th>Recipe Name</th>
+              <td>{{recipe.recipeName}}</td>
+            </tr>
+            <tr>
+              <th>Number of Servings</th>
+              <td>{{recipe.serveCount}}</td>
+            </tr>
+            <tr>
+              <th>Ingredients</th>
+              <td >                  
+                <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.ingredientName}}</li>                
+            </td>
+            </tr>
+            <tr>
+              <th>Cooking Instructions</th>
+              <td>{{recipe.cookingInstructions}}</td>
+            </tr>
+            <tr>
+              <th>Created Date</th>
+              <td>{{recipe.createdDate}}</td>
+            </tr>
+            
+          </table>
+          <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
